@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minecoords</title>
+    <script src="src/js/script.js" defer></script>
+    <link rel="stylesheet" href="src/css/output.css">
+</head>
+<body class="bg-amber-900">
+    <div class="flex justify-center w-full">
+        <button id="newCoordBtn" class="w-full py-4 bg-neutral-300  text-2xl cursor-pointer">Nova Coordenada</button>
+    </div>
+
+    <dialog id="newCoordDialog" class="open:flex flex-col w-screen max-w-none h-screen max-h-none p-0 items-center">
+        <label class="flex text-left w-[50%] md:w-[50%]" for="coordName">Nome: </label>
+        <input name="coordName" id="coordName" type="text" maxlength="14" class="flex p-2 bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400 w-[50%] md:max-w-[50%]">
+    
+        <label class="flex text-left w-[50%] md:w-[50%]" for="xCoord">X: </label>
+        <input name="xCoord" id="xCoord" type="number" class="flex p-2 bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400 w-[50%] md:w-[50%]">
+    
+        <label class="flex text-left w-[50%] md:w-[50%]" for="zCoord">Z: </label>
+        <input name="zCoord" id="zCoord" type="number" class="p-2 bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400 w-[50%] md:w-[50%]">
+
+        <label for="dimension" class="mt-2">Dimensão</label>
+        <select name="dimension" id="dimension" class="bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400 p-2 w-[50%] md:w-[50%]">
+            <option value="ove" class="bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400">Overworld</option>
+            <option value="net" class="bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400">Nether</option>
+            <option value="end" class="bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400">The End</option>
+        </select>
+    
+        <button id="saveCoordBtn" class="flex cursor-pointer w-[50%] md:w-[50%] p-5 mt-4 justify-center bg">Salvar</button>
+    </dialog>
+
+    <div id="coordsDisplayDiv" class="grid grid-cols-1 sm:grid-cols-2 gap-1"></div>
+</body>
+</html>

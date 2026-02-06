@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* importa a fonte */
+@font-face {
+  font-family: 'Monocraft';
+  src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf');
+}
+
+/* registra no Tailwind */
+@theme {
+  --font-sans: 'Monocraft', monospace, sans-serif;
+}
