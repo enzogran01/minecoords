@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>minecoords</title>
+    <title>MINECOORDS</title>
     <script src="src/js/script.js" defer></script>
+    <link rel="shortcut icon" href="src/icons/favicon.png" type="image/png">
     <link rel="stylesheet" href="src/css/output.css">
 </head>
-<body class="bg-amber-900">
-    <div class="flex justify-center w-full">
-        <button id="newCoordBtn" class="w-full py-4 bg-neutral-300  text-2xl cursor-pointer">Nova Coordenada</button>
+<body class="bg-amber-950">
+    <div class="flex justify-center w-full mb-4">
+        <button id="newCoordBtn" class="w-full text-gray-700 outline-none focus:outline-none py-4 border-2 border-amber-950 bg-neutral-300  text-2xl cursor-pointer">Nova Coordenada</button>
     </div>
 
-    <dialog id="newCoordDialog" class="open:flex flex-col w-screen max-w-none h-screen max-h-none p-0 items-center">
+    <dialog id="newCoordDialog" class="open:flex outline-none focus:outline-none text-gray-700 flex-col text-2xl md:text-xl w-screen md:w-fit max-w-none h-screen max-h-none p-0 items-center m-auto">
+        <div class="w-[50%] mb-4 mt-2 flex justify-start">
+            <svg id="closeDialog" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+        </div>
+
         <label class="flex text-left w-[50%] md:w-[50%]" for="coordName">Nome: </label>
         <input name="coordName" id="coordName" type="text" maxlength="14" class="flex p-2 bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400 w-[50%] md:max-w-[50%]">
     
@@ -29,7 +34,7 @@
             <option value="end" class="bg-neutral-300 active:bg-neutral-400 focus:bg-neutral-400">The End</option>
         </select>
     
-        <button id="saveCoordBtn" class="flex cursor-pointer w-[50%] md:w-[50%] p-5 mt-4 justify-center bg">Salvar</button>
+        <button id="saveCoordBtn" class="flex cursor-pointer w-[50%] md:w-[50%] p-5 mt-4 justify-center bg-slate-700 text-white transition-all duration-200 active:bg-slate-500 active:-translate-y-1">Salvar</button>
     </dialog>
 
     <div id="coordsDisplayDiv" class="grid grid-cols-1 sm:grid-cols-2 gap-1"></div>
