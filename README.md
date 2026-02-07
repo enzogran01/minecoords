@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/enzogran01/minecoords?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/enzogran01/minecoords?style=for-the-badge)
 
-<img src="https://i.pinimg.com/originals/ab/be/8f/abbe8fde3c7ab201c38e66b03b163e2c.gif" alt="Landscape">
+<img src="https://i.pinimg.com/originals/3a/88/6b/3a886b629549641b252111e72c197d9e.gif" alt="Landscape">
 
 > Lightweight single-page web app to save, display, and convert Minecraft coordinates between Overworld and Nether.
 
