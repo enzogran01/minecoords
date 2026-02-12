@@ -8,5 +8,5 @@
 
 /* registra no Tailwind */
 @theme {
-  --font-sans: 'Monocraft', monospace, sans-serif;
+  --font-sans: 'Monocraft', monospace, sans-serif, system-ui;
 }
