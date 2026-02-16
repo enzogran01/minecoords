@@ -52,19 +52,33 @@ function formatCoordCard (coord) {
     const pX = document.createElement("p");
     const pZ = document.createElement("p");
     const pDimension = document.createElement("p");
+    const btnDeleteCoord = document.createElement("button");
+    const titleDiv = document.createElement("div");
 
     h3Name.textContent = `${name}`;
     pX.textContent = `X: ${x}`;
     pZ.textContent = `Z: ${z}`;
     pDimension.textContent = thisDimension;
+    btnDeleteCoord.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>`;
 
-    card.appendChild(h3Name);
+    card.appendChild(titleDiv);
+    titleDiv.appendChild(btnDeleteCoord);
+    titleDiv.appendChild(h3Name);
     card.appendChild(pX);
     card.appendChild(pZ);
     card.appendChild(pDimension);
 
-    h3Name.classList.add("text-3xl", "mb-4");  
-    card.classList.add("flex", "flex-col", "items-center", bgColor, "text-2xl", "p-2", "h-fit");
+    card.classList.add("flex", "flex-col", "items-center", bgColor, "text-2xl", "p-4", "h-fit", "w-fit", "rounded-xl", "transition-all", "hover:-translate-y-1", "hover:shadow-lg", "duration-300");
+    titleDiv.classList.add("flex", "items-center", "justify-center", "w-full", "mb-4", "relative");
+    btnDeleteCoord.classList.add("absolute", "right-[90%]");
+    pDimension.classList.add("p-2", "rounded-xl");
+    h3Name.classList.add("text-3xl");  
+    btnDeleteCoord.classList.add("flex", "items-center", "justify-center", "m-0", "p-1", "cursor-pointer", "transition-all", "duration-100", "active:scale-75", "active:bg-white/40", "rounded-full");
+
+    btnDeleteCoord.addEventListener("click", () => {
+
+        renderCards();
+    });
 
     if (thisDimension !== "The End") {
         const btnDimension = document.createElement("button");
