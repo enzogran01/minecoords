@@ -15,6 +15,7 @@
 The project is still under development, and the next updates will focus on the following tasks:
 
 - [x] Add new coordinates  
+= [ ] Follow clean architecture
 - [ ] Delete/Edit coordinates  
 - [ ] Add worlds  
 - [ ] Login system  
