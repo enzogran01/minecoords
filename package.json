@@ -2,5 +2,23 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "tailwindcss": "^4.1.18"
-  }
+  },
+  "name": "minecoord-saver",
+  "version": "1.0.0",
+  "description": "![GitHub repo size](https://img.shields.io/github/repo-size/enzogran01/minecoords?style=for-the-badge)\r ![GitHub language count](https://img.shields.io/github/languages/count/enzogran01/minecoords?style=for-the-badge)\r ![GitHub forks](https://img.shields.io/github/forks/enzogran01/minecoords?style=for-the-badge)\r ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/enzogran01/minecoords?style=for-the-badge)\r ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/enzogran01/minecoords?style=for-the-badge)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzogran01/minecoords.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enzogran01/minecoords/issues"
+  },
+  "homepage": "https://github.com/enzogran01/minecoords#readme"
 }

@@ -54,6 +54,8 @@ function formatCoordCard (coord) {
     const pDimension = document.createElement("p");
     const btnDeleteCoord = document.createElement("button");
     const titleDiv = document.createElement("div");
+    const btnDimension = document.createElement("button");
+    const spanAlternateDimension = document.createElement("p");
 
     h3Name.textContent = `${name}`;
     pX.textContent = `X: ${x}`;
@@ -68,33 +70,31 @@ function formatCoordCard (coord) {
     card.appendChild(pZ);
     card.appendChild(pDimension);
 
-    card.classList.add("flex", "flex-col", "items-center", bgColor, "text-2xl", "p-4", "h-fit", "w-fit", "rounded-xl", "transition-all", "hover:-translate-y-1", "hover:shadow-lg", "duration-300");
+    card.classList.add("flex", "flex-col", "items-center", bgColor, "text-2xl", "p-4", "h-full", "max-h-fit", "w-full", "rounded-xl", "transition-all", "hover:-translate-y-1", "hover:shadow-lg", "duration-300");
     titleDiv.classList.add("flex", "items-center", "justify-center", "w-full", "mb-4", "relative");
-    btnDeleteCoord.classList.add("absolute", "right-[90%]");
+    btnDeleteCoord.classList.add("absolute", "right-[90%]", "flex", "items-center", "justify-center", "m-0", "p-1", "cursor-pointer", "transition-all", "duration-100", "active:scale-90", "active:bg-white/40", "rounded-full");
     pDimension.classList.add("p-2", "rounded-xl");
-    h3Name.classList.add("text-3xl");  
-    btnDeleteCoord.classList.add("flex", "items-center", "justify-center", "m-0", "p-1", "cursor-pointer", "transition-all", "duration-100", "active:scale-75", "active:bg-white/40", "rounded-full");
+    h3Name.classList.add("text-3xl"); 
+    btnDimension.classList.add("p-2", "rounded-md", "bg-slate-700", "text-white", "mt-4", "mb-2", "transition-all", "duration-200", "cursor-pointer", "active:bg-slate-500", "active:-translate-y-1", "disabled:opacity-70", "disabled:pointer-events-none");
+    spanAlternateDimension.classList.add("text-center", "text-xl");
+
+    card.appendChild(btnDimension);
 
     btnDeleteCoord.addEventListener("click", () => {
-
-        renderCards();
+        // renderCards();
     });
 
     if (thisDimension !== "The End") {
-        const btnDimension = document.createElement("button");
-        const spanAlternateDimension = document.createElement("p");
-
-        btnDimension.classList.add("p-2", "rounded-md", "bg-slate-700", "text-white", "mt-4", "mb-2", "transition-all", "duration-200", "cursor-pointer", "active:bg-slate-500", "active:-translate-y-1");
-        spanAlternateDimension.classList.add("text-center", "text-xl");
-
         btnDimension.textContent = `Converter para ${thisDimension === "Overworld" ? "Nether" : "Overworld"}`;
-        card.appendChild(btnDimension);
 
         btnDimension.addEventListener("click", () => {
             const converted = coord.toDimension();
-            spanAlternateDimension.textContent = `(${(thisDimension === "Overworld" ? "Nether" : "Overworld").toUpperCase()}) X: ${converted.x.toFixed(0)} | Z: ${converted.z.toFixed(0)}`;
+            spanAlternateDimension.textContent = `(${(thisDimension === "Overworld" ? "Nether" : "Overworld").toUpperCase()}) X: ${converted.x.toFixed(1)} | Z: ${converted.z.toFixed(1)}`;
             card.appendChild(spanAlternateDimension);
         });
+    } else {
+        btnDimension.textContent = "Conversão indisponível";
+        btnDimension.disabled = true;
     }
 
     return card;

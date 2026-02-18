@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="src/icons/favicon.png" type="image/png">
     <link rel="stylesheet" href="src/css/output.css">
 </head>
-<body class="bg-white">
+<body class="bg-white bg-[radial-gradient(#d1d5db_1.5px,transparent_1.5px)] bg-size-[32px_32px]">
     <div class="flex justify-center w-full mb-4 bg-neutral-300">
         <button id="newCoordBtn" class="w-full text-gray-700 focus:outline-none py-4 text-2xl cursor-pointer">Nova Coordenada</button>
     </div>
 
-    <dialog id="newCoordDialog" class="open:flex outline-none focus:outline-none text-gray-700 flex-col text-2xl md:text-xl w-screen md:w-[50%] max-w-none h-screen max-h-none p-0 items-center m-auto">
+    <dialog id="newCoordDialog" class="open:flex outline-none rounded-2xl focus:outline-none text-gray-700 flex-col text-2xl md:text-xl w-screen sm:w-[75%] md:w-[50%] max-w-none h-full sm:h-[80%] max-h-none items-center m-auto p-4 transition-all">
         <div class="w-full mb-4 mt-2 flex justify-start">
             <svg id="closeDialog" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#000000"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
         </div>
@@ -37,6 +37,6 @@
         <button id="saveCoordBtn" class="flex cursor-pointer w-[50%] md:w-[50%] p-5 mt-4 justify-center bg-slate-700 text-white transition-all duration-200 active:bg-slate-500 active:-translate-y-1">Salvar</button>
     </dialog>
 
-    <div id="coordsDisplayDiv" class="grid grid-cols-1 place-items-center sm:grid-cols-3 xl:grid-cols-4 gap-2 sm:pl-2"></div>
+    <div id="coordsDisplayDiv" class="w-full grid grid-cols-1 place-items-start sm:grid-cols-3 xl:grid-cols-4 gap-2 sm:pl-2"></div>
 </body>
 </html>
